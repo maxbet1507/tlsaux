@@ -15,6 +15,7 @@ import (
 func netpipe() (svconn net.Conn, clconn net.Conn, err error) {
 	var l net.Listener
 	if l, err = net.Listen("tcp", ""); err == nil {
+		defer l.Close()
 		eg := errgroup.Group{}
 		eg.Go(func() (err error) {
 			svconn, err = l.Accept()
