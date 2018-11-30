@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/maxbet1507/eap/eaptls/capture/prf"
+	"github.com/maxbet1507/tlsaux/prf"
 )
 
 func TestPRF_TLS10(t *testing.T) {
